@@ -12,11 +12,14 @@ Example conversation:
 3. Run `./load.py`. This will read the PDF files and save them to the vector DB.
 4. Run `chat.py`. For each question, context will be loaded from the vector DB and a query will be made to the local LLM. You can chat with your local PDFs.
 
-`
+```
 Enter your question: Is Python good for students?
 Generating answer...
- A: Yes, Python is a great language to introduce beginners to programming concepts such as loops and procedures. It also has a large standard library that allows students to work on realistic applications early in their course while learning the fundamentals of programming. The interactive interpreter enables students to test language features while they're programming, making it easier for them to learn and experiment with Python. Additionally, there are good IDEs available like IDLE which is written in Python using Tkinter.
-`
+A: Yes, Python is a great language to introduce beginners to programming concepts such as loops and procedures.
+It also has a large standard library that allows students to work on realistic applications early in their course while learning the fundamentals of programming.
+The interactive interpreter enables students to test language features while they're programming, making it easier for them to learn and experiment with Python.
+Additionally, there are good IDEs available like IDLE which is written in Python using Tkinter.
+```
 
 ## Plain gpt4all example. Chat with a local LLM.
 
@@ -26,8 +29,9 @@ Generating answer...
 
 Example conversation:
 
-`
-Enter your question: Output a JSON with top 10 countries by population. Should include name and population attributes. I need only the JSON.
+```
+Enter your question: Output a JSON with top 10 countries by population.
+Should include name and population attributes. I need only the JSON.
 Generating response...
 [
     {
@@ -71,7 +75,7 @@ Generating response...
         "population": 128421000
     }
 ]
-`
+```
 
 
 ## Utils 
