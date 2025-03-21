@@ -1,0 +1,11 @@
+gpt4all
+
+huggingface-hub
+sentence-transformers
+
+langchain==0.0.352
+chromadb==0.3.29
+tiktoken
+unstructured
+unstructured[local-pdf]
+unstructured[local-inference]
