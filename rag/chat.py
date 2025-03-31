@@ -5,11 +5,19 @@ from langchain.vectorstores import Chroma
 from langchain.chains import ConversationalRetrievalChain
 from langchain.embeddings import HuggingFaceEmbeddings
 
-from config import *
+from config import LLM_PATH, INDEX_PERSIST_DIRECTORY, EMBEDDING_MODEL, validate_config
 
 def init_conversation():
+    # Validate configuration
+    errors = validate_config()
+    if errors:
+        print("Configuration errors detected:")
+        for error in errors:
+            print(f"  - {error}")
+        print("Attempting to continue despite errors...")
+    
     # load index
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
     vectordb = Chroma(persist_directory=INDEX_PERSIST_DIRECTORY,embedding_function=embeddings)
 
     # create conversation
